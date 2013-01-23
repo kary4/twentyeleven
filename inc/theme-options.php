@@ -361,8 +361,8 @@ function twentyeleven_enqueue_color_scheme() {
 	$options = twentyeleven_get_theme_options();
 	$color_scheme = $options['color_scheme'];
 
-	if ( 'dark' == $color_scheme )
-		wp_enqueue_style( 'dark', get_template_directory_uri() . '/colors/dark.css', array(), null );
+	// doing bad things: editing the parent theme files
+	wp_enqueue_style( 'dark', get_template_directory_uri() . '/colors/dark.css', array(), null );
 
 	do_action( 'twentyeleven_enqueue_color_scheme', $color_scheme );
 }
